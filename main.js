@@ -47,4 +47,9 @@ $("#my_start").click(()=>{
 $("#my_stop").click(()=>{
 	console.log("Stop!!");
 	Quagga.stop();
+	
+        // 指定したIDの要素のテキストを取得
+        var element = $("#my_result").text(result.codeResult.code);
+	// テキストをクリップボードにコピー
+        navigator.clipboard.writeText(element.textContent);
 });
