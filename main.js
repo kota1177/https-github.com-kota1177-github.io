@@ -24,13 +24,6 @@ $("#my_start").click(()=>{
 		}
 		console.log("Initialization finished!!");
 		Quagga.start();
-
-			
-        // 指定したIDの要素のテキストを取得
-        var element = $("#my_result").text(result.codeResult.code);
-	// テキストをクリップボードにコピー
-        navigator.clipboard.writeText(element.textContent);
-		
 	});
 
 	Quagga.onProcessed(result=>{
