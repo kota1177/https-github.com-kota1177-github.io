@@ -47,9 +47,4 @@ $("#my_start").click(()=>{
 $("#my_stop").click(()=>{
 	console.log("Stop!!");
 	Quagga.stop();
-
-$("#my_copy").click(()=>{
-	console.log("Stop!!");
-	Quagga.stop();
-});
 });
