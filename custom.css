@@ -27,7 +27,7 @@ html, body{
 }
 
 #my_quagga video{
-	width: 8%; height: 80%; 
+	width: 100%; height: 100%; 
 	position: absolute;
 	top: 0px; left: 0px;
 }
