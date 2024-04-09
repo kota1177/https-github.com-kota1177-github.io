@@ -52,5 +52,4 @@ $("#my_copy").click(()=>{
 	console.log("Stop!!");
 	Quagga.stop();
 });
-
 });
