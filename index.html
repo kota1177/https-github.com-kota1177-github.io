@@ -7,6 +7,20 @@
 	<title>J QuaggaJS </title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="./custom.css">
+
+    <base target="_top">
+    <script type="text/javascript">
+    function sendText(){
+      google.script.run
+        .withSuccessHandler(inform())
+        .writeSheet(document.forms['formText'].elements['message'].value);
+    }
+    function inform() {
+      alert('スプレッドシートに書き込みました');
+    }
+    </script>
+
+	
 </head>
 <body>
 	<div id="my_container">
@@ -28,5 +42,12 @@
 	<script src="//unpkg.com/@ericblade/quagga2@1.7.4/dist/quagga.min.js"></script>
 	<script src="//cdn.jsdelivr.net/gh/mtaketani113/jquery-barcode@master/jquery-barcode.js"></script>
 	<script src="./main.js"></script>
+      <h1>スプレッドシート書き込みテスト</h1>
+      <p>スプレッドシートに書き込む内容を入力↓</p>
+      <form name="formText">
+        <input type="text" name="message">
+        <input type="button" onclick="sendText()" value="送信">
+      </form>
+	
 </body>
 </html>
